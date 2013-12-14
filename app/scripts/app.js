@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('designbykubocomApp', [
+  'ivpusic.cookie',
   'ngSanitize',
   'ngRoute'
 ])
@@ -9,6 +10,10 @@ angular.module('designbykubocomApp', [
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
+      })
+      .when('/steps', {
+        templateUrl: 'views/steps.html',
+        controller: 'StepsCtrl'
       })
       .otherwise({
         redirectTo: '/'

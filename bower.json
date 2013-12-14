@@ -8,7 +8,8 @@
     "jquery": "~1.10.2",
     "sass-bootstrap": "~3.0.0",
     "angular-sanitize": "~1.2.0",
-    "angular-route": "~1.2.0"
+    "angular-route": "~1.2.0",
+    "angular-cookie": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",
