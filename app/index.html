@@ -17,7 +17,7 @@
 </head>
   <body ng-app="designbykubocomApp">
     <!-- Main container -->
-    <div class="container">
+    <div id="main">
 
       <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -29,14 +29,14 @@
       <![endif]-->
 
       <!-- Header/Menu -->
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <!--li><a ng-href="/">Home</a></li-->
+      <header>
+        <div class="logo"><img alt="Design by Kubo" src="/images/logo.jpg" height="150px" width="150px" /></div>
+        <ul class="nav nav-pills">
           <li><a ng-href="/#/steps">Steps</a></li>
           <li><a ng-href="/#/services">Services</a></li>
+          <li><a ng-href="/#/services">Portfolio</a></li>
         </ul>
-        <h3 class="text-muted">Design by Kubo</h3>
-      </div>
+      </header>
 
 
       <!-- Add your site or application content here -->
@@ -44,9 +44,24 @@
 
 
       <!-- Footer -->
-      <div class="footer">
-        <p>Things</p>
-      </div>
+      <footer class="row wide">
+        <div class="row centered">
+          <div class="csp-logo col-md-2">
+            <img alt="CSP Logo" src="/images/csp-logo.png" height="100px" width="100px" />
+          </div>
+          <div class="contact col-md-5 pull-right">
+            <div class="row info email"><span class="title col-md-4">email:</span><span class="data col-md-8"><a href="mailto:info@designbykubo.com">info@designbykubo.com</a></span></div>
+            <div class="row info tel"><span class="title col-md-4">tel:</span><span class="data col-md-8">289-300-0768</span></div>
+            <div class="row info address"><span class="title col-md-4">address:</span><span class="data col-md-8">123 Change st.<br />Milton, ON</span></div>
+          </div>
+          <br />
+        </div>
+        <div class="row centered disclaimer">
+          &copy; 2013 Design By Kubo *Site contains some stock photos. All photos in portfolio are stager's work.
+        </div>
+      </footer>
+
+
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -61,6 +76,7 @@
     </script>
 
     <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/jquery.stellar/jquery.stellar.js"></script>
     <script src="bower_components/angular/angular.js"></script>
 
         <!-- build:js scripts/plugins.js -->
@@ -82,6 +98,7 @@
         <script src="bower_components/angular-cookie/angular-cookie.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angularjs-stellar/js/stellar.directives.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->

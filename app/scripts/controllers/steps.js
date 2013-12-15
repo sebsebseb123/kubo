@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('designbykubocomApp')
-  .controller('StepsCtrl', ['$scope', '$http', 'ipCookie', function ($scope, $http, ipCookie) {
+  .controller('StepsCtrl', ['$scope', '$http', 'ipCookie', 'stellar', function ($scope, $http, ipCookie, stellar) {
     // Get the steps... from cache if possible.
     var getSteps = function () {
       if (!ipCookie('stepsData')) {
@@ -38,4 +38,6 @@ angular.module('designbykubocomApp')
 
     // Get the steps, parse them, then add them to the scope.
     getSteps();
+
+    stellar.window();
   }]);

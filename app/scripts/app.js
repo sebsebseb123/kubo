@@ -3,7 +3,8 @@
 angular.module('designbykubocomApp', [
   'ivpusic.cookie',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'stellar.directives'
 ])
   .config(function ($routeProvider) {
     $routeProvider

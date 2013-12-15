@@ -11,36 +11,76 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 /* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+}
+
+a {
+}
+
+#main {
+    width: 100%;
+    /* Custom page header */
+    header {
+        margin-bottom: 0;
+        text-align: center;
+        .nav {
+            padding: 10px 0;
+        }
+        .nav > li {
+            display: inline-block;
+            float: none;
+            a {
+                background-color: rgba(0,0,0,0.5);
+                color: #EEE;
+            }
+        }
+        .logo img {
+            box-shadow: 0 0 5px rgba(0,0,0,0.75);
+        }
+    }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
+header,
 .marketing,
-.footer {
+footer {
     padding-left: 15px;
     padding-right: 15px;
 }
 
 /* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+header {
+    background-image: url(images/wall.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 20px;
 }
 
 /* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
+footer {
+    padding-top: 20px;
+    &.row.wide {
+    }
+    &.row .row.centered {
+        padding: 10px 0;
+    }
+    .disclaimer {
+        font-size: 10px;
+        text-align: center;
+    }
+    .contact {
+        text-align: right;
+        .info {
+            .title {
+                font-style: italic;
+                padding: 2px 5px;
+            }
+            .data {
+                padding: 2px 5px;
+                text-align: left;
+            }
+        }
+    }
 }
 
 .container-narrow > hr {
@@ -67,6 +107,57 @@ body {
     margin-top: 28px;
 }
 
+/* Rows for Pages */
+.row {
+    &.wide {
+        background-color: cornsilk;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+    .row.centered {
+        margin: auto;
+        padding: 40px 0;
+        width: 900px;
+    }
+}
+
+
+/* Steps Pages */
+.steps .background {
+    background-color: #FFF;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 0 500px;
+    .number {
+        border: 1px solid rgba(0,0,0,0.5);
+        font-size: 100px;
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+        width: 150px;
+    }
+    .paragraph {
+        padding: 0 40px;
+    }
+    &.paragraph {
+        background-image: url(images/living-room.jpg);
+    }
+    &.step-0 {
+        background-image: url(images/couch.jpg);
+    }
+    &.step-1 {
+        background-image: url(images/bedroom.jpg);
+    }
+    &.step-2 {
+        background-image: url(images/house.jpg);
+    }
+    &.step-3 {
+        background-image: url(images/kitchen.jpg);
+    }
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
@@ -74,14 +165,14 @@ body {
     }
 
     /* Remove the padding we set earlier */
-    .header,
+    header,
     .marketing,
-    .footer {
+    footer {
         padding-left: 0;
         padding-right: 0;
     }
     /* Space out the masthead */
-    .header {
+    header {
         margin-bottom: 30px;
     }
     /* Remove the bottom border on the jumbotron for visual effect */

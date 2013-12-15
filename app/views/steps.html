@@ -1,8 +1,17 @@
-
-<div class="row marketing">
-  {{paragraph}}
-</div>
-
-<div class="row marketing" ng-repeat="step in steps">
-  {{step}}
+<div class="steps">
+  <div class="paragraph background" ng-show="paragraph">
+    <div class="row wide">
+      <div class="row centered">
+        <div class="col-md-12 paragraph">{{paragraph}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="step background step-{{$index}}" ng-repeat="step in steps">
+    <div class="row wide">
+      <div class="row centered">
+        <div class="col-md-2 number">{{$index + 1}}</div>
+        <div class="col-md-10 paragraph">{{step}}</div>
+      </div>
+    </div>
+  </div>
 </div>
