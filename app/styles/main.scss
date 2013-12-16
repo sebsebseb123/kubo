@@ -11,9 +11,22 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 /* Space out content a bit */
 body {
+    font-family: 'Raleway', sans-serif;
 }
 
 a {
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-transform: uppercase;
 }
 
 #main {
@@ -23,18 +36,29 @@ a {
         margin-bottom: 0;
         text-align: center;
         .nav {
-            padding: 10px 0;
+            padding: 20px 0;
         }
         .nav > li {
             display: inline-block;
             float: none;
             a {
-                background-color: rgba(0,0,0,0.5);
-                color: #EEE;
+                background-color: rgba(0,0,0,0);
+                color: #111;
+                font-size: larger;
+                letter-spacing: 2px;
+                margin: 0 15px;
+                text-transform: uppercase;
+                text-shadow: 0 0 1px #FFF;
             }
         }
-        .logo img {
-            box-shadow: 0 0 5px rgba(0,0,0,0.75);
+        .logo{
+            .house {
+                margin-right: 10px;
+                height: 83px;
+            }
+            .text-logo {
+                height: 80px;
+            }
         }
     }
 }
@@ -69,7 +93,7 @@ footer {
         text-align: center;
     }
     .contact {
-        text-align: right;
+        padding-top: 5px;
         .info {
             .title {
                 font-style: italic;
@@ -79,6 +103,16 @@ footer {
                 padding: 2px 5px;
                 text-align: left;
             }
+        }
+    }
+    .csp-logo {
+        text-align: center;
+        border-right: 1px solid;
+        height: 120px;
+        line-height: 120px;
+        img {
+            height: 80px;
+            width: 80px;
         }
     }
 }
@@ -110,7 +144,8 @@ footer {
 /* Rows for Pages */
 .row {
     &.wide {
-        background-color: cornsilk;
+        background-color: #EFEFF0;
+        box-shadow: 0 0 20px -10px;
     }
     &:first-child {
         margin-top: 0;
@@ -129,7 +164,7 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 0 500px;
+    padding: 0 0 300px;
     .number {
         border: 1px solid rgba(0,0,0,0.5);
         font-size: 100px;
@@ -137,15 +172,35 @@ footer {
         line-height: 150px;
         text-align: center;
         width: 150px;
+        font-family: 'Cardo', serif;
     }
     .paragraph {
         padding: 0 40px;
+    }
+    .icon {
+        background-image: url(images/icons.svg);
+        background-size: 2000px;
+        background-position: 7px -19px; /* Seat */
+        height: 150px;
+        width: 150px;
+        &.icon-0 {
+            background-position: -203px -219px; /* Chat */
+        }
+        &.icon-1 {
+            background-position: 7px -19px; /* Seat */
+        }
+        &.icon-2 {
+            background-position: 7px -219px; /* Paintbrush */
+        }
+        &.icon-3 {
+            background-position: -203px -19px; /* Arrow */
+        }
     }
     &.paragraph {
         background-image: url(images/living-room.jpg);
     }
     &.step-0 {
-        background-image: url(images/couch.jpg);
+        background-image: url(images/vase.jpg);
     }
     &.step-1 {
         background-image: url(images/bedroom.jpg);

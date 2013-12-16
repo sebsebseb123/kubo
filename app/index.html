@@ -11,10 +11,14 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css({.tmp,app}) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-</head>
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cardo|Raleway:400,700,200' rel='stylesheet' type='text/css'>
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
   <body ng-app="designbykubocomApp">
     <!-- Main container -->
     <div id="main">
@@ -30,11 +34,15 @@
 
       <!-- Header/Menu -->
       <header>
-        <div class="logo"><img alt="Design by Kubo" src="/images/logo.jpg" height="150px" width="150px" /></div>
+        <div class="logo">
+          <img class="house" alt="Design by Kubo" src="/images/house-logo.png" />
+          <img class="text-logo" alt="Design by Kubo" src="/images/text-logo.png" />
+        </div>
         <ul class="nav nav-pills">
-          <li><a ng-href="/#/steps">Steps</a></li>
+          <li><a ng-href="/#/steps">Process</a></li>
           <li><a ng-href="/#/services">Services</a></li>
-          <li><a ng-href="/#/services">Portfolio</a></li>
+          <li><a ng-href="/#/services">Gallery</a></li>
+          <li><a ng-href="/#/services">Contact</a></li>
         </ul>
       </header>
 
@@ -49,10 +57,13 @@
           <div class="csp-logo col-md-2">
             <img alt="CSP Logo" src="/images/csp-logo.png" height="100px" width="100px" />
           </div>
-          <div class="contact col-md-5 pull-right">
-            <div class="row info email"><span class="title col-md-4">email:</span><span class="data col-md-8"><a href="mailto:info@designbykubo.com">info@designbykubo.com</a></span></div>
-            <div class="row info tel"><span class="title col-md-4">tel:</span><span class="data col-md-8">289-300-0768</span></div>
-            <div class="row info address"><span class="title col-md-4">address:</span><span class="data col-md-8">123 Change st.<br />Milton, ON</span></div>
+          <div class="contact col-md-10">
+            <div class="row"><span class="col-md-12">Sandra Kubo, ccsp&reg;</span></div>
+            <div class="row"><span class="col-md-12">Real Estate Staging & Design</span></div>
+            <div class="row"><span class="col-md-12">Consultant</span></div>
+            <br />
+            <div class="row"><span class="data col-md-8"><a href="tel:289-300-0768">289.300.0768</a></span></div>
+            <div class="row"><span class="data col-md-8"><a href="mailto:info@designbykubo.com">info@designbykubo.com</a></span></div>
           </div>
           <br />
         </div>

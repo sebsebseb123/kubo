@@ -2,7 +2,8 @@
   <div class="paragraph background" ng-show="paragraph">
     <div class="row wide">
       <div class="row centered">
-        <div class="col-md-12 paragraph">{{paragraph}}</div>
+        <div ng-bind-html="paragraph" class="album-art col-md-12"></div>
+        <!--<div class="col-md-12 paragraph">{{paragraph}}</div>-->
       </div>
     </div>
   </div>
@@ -10,7 +11,8 @@
     <div class="row wide">
       <div class="row centered">
         <div class="col-md-2 number">{{$index + 1}}</div>
-        <div class="col-md-10 paragraph">{{step}}</div>
+        <div ng-bind-html="step" class="col-md-8 paragraph"></div>
+        <div class="col-md-2 icon icon-{{$index}}"></div>
       </div>
     </div>
   </div>

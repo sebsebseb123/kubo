@@ -29,15 +29,12 @@ angular.module('designbykubocomApp')
       data = data[0];
       var paragraph = data.body;
       var steps = data.field_steps.split('&lt;&lt;&gt;&gt;');
-      console.log(paragraph);
-      console.log(steps);
       // Then add it to the scope.
       $scope.paragraph = paragraph;
       $scope.steps = steps;
     };
 
     // Get the steps, parse them, then add them to the scope.
-    getSteps();
-
-    stellar.window();
+    //getSteps();
+    //getJson();
   }]);
