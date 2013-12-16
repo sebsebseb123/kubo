@@ -35,6 +35,6 @@ angular.module('designbykubocomApp')
     };
 
     // Get the steps, parse them, then add them to the scope.
-    //getSteps();
+    getSteps();
     //getJson();
   }]);
