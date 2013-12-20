@@ -10,8 +10,6 @@
     "angular-sanitize": "~1.2.0",
     "angular-route": "~1.2.0",
     "angular-cookie": "*",
-    "angularjs-stellar": "*",
-    "jquery.stellar": "~0.6.2"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",
