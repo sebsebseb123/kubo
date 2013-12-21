@@ -3,7 +3,7 @@
 angular.module('designbykubocomApp')
   .controller('StepsCtrl', ['$scope', '$http', 'ipCookie', function ($scope, $http, ipCookie) {
     // Get the steps... from cache if possible.
-    var getSteps = function () {
+    var getData = function () {
       if (!ipCookie('stepsData')) {
         // If no cookie data, retrieve it and set it.
         getJson();
@@ -35,5 +35,5 @@ angular.module('designbykubocomApp')
     };
 
     // Get the steps, parse them, then add them to the scope.
-    getSteps();
+    getData();
   }]);

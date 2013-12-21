@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('designbykubocomApp', [
+  'getter.directives',
   'ivpusic.cookie',
   'ngSanitize',
   'ngRoute'

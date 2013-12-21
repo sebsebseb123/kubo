@@ -1,10 +1,6 @@
 'use strict';
 
 angular.module('designbykubocomApp')
-  .controller('ContactCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('ContactCtrl', ['$scope', 'getter', function ($scope, getter) {
+    $scope.page = getter.getData('contact');
+  }]);
