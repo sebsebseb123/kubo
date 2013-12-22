@@ -2,7 +2,7 @@
 
 angular.module('designbykubocomApp', [
   'getter.directives',
-  'ivpusic.cookie',
+  'LocalStorageModule',
   'ngSanitize',
   'ngRoute'
 ])

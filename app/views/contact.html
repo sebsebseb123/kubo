@@ -1,18 +1,23 @@
 <div class="contact">
-  <div class="paragraph background" ng-show="paragraph">
+  <div class="paragraph background">
     <div class="row wide">
       <div class="row centered">
-        <div ng-bind-html="paragraph" class="album-art col-md-12"></div>
-        <!--<div class="col-md-12 paragraph">{{paragraph}}</div>-->
-      </div>
-    </div>
-  </div>
-  <div class="step background step-{{$index}}" ng-repeat="step in steps">
-    <div class="row wide">
-      <div class="row centered">
-        <div class="col-md-2 number">{{$index + 1}}</div>
-        <div ng-bind-html="step" class="col-md-8 paragraph"></div>
-        <div class="col-md-2 icon icon-{{$index}}"></div>
+        <form class="col-md-6" role="form">
+          <div class="email field form-group">
+            <label for="contact-email-field">Email</label>
+            <input autofocus="autofocus" type="email" class="form-control" id="contact-email-field" name="contact-email-field" placeholder="Enter email address" />
+          </div>
+          <div class="message field form-group">
+            <label for="contact-message-field">Message</label>
+            <textarea class="form-control" rows="3" id="contact-message-field" name="contact-message-field"></textarea>
+          </div>
+          <div class="submit field form-group">
+            <button type="submit" class="btn btn-default pull-right">Send</button>
+          </div>
+        </form>
+        <div class="info col-md-6">
+          <div ng-bind-html="page.body" class="paragraph"></div>
+        </div>
       </div>
     </div>
   </div>

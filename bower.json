@@ -10,6 +10,7 @@
     "angular-sanitize": "~1.2.0",
     "angular-route": "~1.2.0",
     "angular-cookie": "*",
+    "angular-local-storage": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",

@@ -1,13 +1,12 @@
 <div class="steps">
-  <div class="paragraph background" ng-show="paragraph">
+  <div class="paragraph background" ng-show="page.body">
     <div class="row wide">
       <div class="row centered">
-        <div ng-bind-html="paragraph" class="album-art col-md-12"></div>
-        <!--<div class="col-md-12 paragraph">{{paragraph}}</div>-->
+        <div ng-bind-html="page.body" class="col-md-12"></div>
       </div>
     </div>
   </div>
-  <div class="step background step-{{$index}}" ng-repeat="step in steps">
+  <div class="step background step-{{$index}}" ng-repeat="step in page.steps">
     <div class="row wide">
       <div class="row centered">
         <div class="col-md-2 number">{{$index + 1}}</div>
