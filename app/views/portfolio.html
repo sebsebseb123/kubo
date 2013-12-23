@@ -1,1 +1,23 @@
-<p>This is the portfolio view.</p>
+<div class="portfolio">
+  <div class="study background" ng-show="page.body">
+    <div class="row wide">
+      <div class="row centered">
+        <div ng-bind-html="page.body" class="col-md-12"></div>
+      </div>
+      <div class="row centered">
+        <div class="col-md-3 study-tabs">
+          <div class="study-tab-{{$index}}" ng-repeat="study in page.caseStudies">
+            <div class="col-md-12">{{study.title}}</div>
+          </div>
+        </div>
+        <div class="col-md-9 study">
+          <div class="study study-{{$index}}" ng-repeat="study in page.caseStudies">
+            <h3 class="col-md-12">{{study.title}}</h3>
+            <div class="col-md-12" ng-bind-html="study.body"></div>
+            <div class="col-md-12 image-{{$index}}" ng-repeat="image in study.images" ng-bind-html="image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

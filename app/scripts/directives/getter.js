@@ -22,7 +22,28 @@ angular.module('getter.directives', [])
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
-              pageData.about_bodies = data.field_about_body.split('&lt;&lt;&gt;&gt;');
+              pageData.about_bodies = data[0].field_about_body.split('&lt;&lt;&gt;&gt;');
+              // Then return it.
+              return pageData;
+            }
+          },
+          'portfolio': {
+            'url': 'http://dev-design-by-kubo.gotpantheon.com/portfolio?callback=JSON_CALLBACK',
+            'parser': function(data) {
+              // Reset pageData object, then set it up.
+              pageData = {};
+              pageData.body = data[0].body;
+              pageData.caseStudies = [];
+              for (var i = 0; i < data.length; i++) {
+                // Create tmp var.
+                var caseStudy = {};
+                caseStudy.title = data[i].title;
+                caseStudy.body = data[i].body_1;
+                caseStudy.images = data[i].nothing.split('||||');
+
+                // Add tmp var to pageData.
+                pageData.caseStudies.push(caseStudy);
+              }
               // Then return it.
               return pageData;
             }
@@ -32,8 +53,8 @@ angular.module('getter.directives', [])
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
-              pageData.body = data.body;
-              pageData.steps = data.field_steps.split('&lt;&lt;&gt;&gt;');
+              pageData.body = data[0].body;
+              pageData.steps = data[0].field_steps.split('&lt;&lt;&gt;&gt;');
               // Then return it.
               return pageData;
             }
@@ -43,7 +64,7 @@ angular.module('getter.directives', [])
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
-              pageData.body = data.body;
+              pageData.body = data[0].body;
               // Then return it.
               return pageData;
             }
@@ -55,11 +76,12 @@ angular.module('getter.directives', [])
           $http.jsonp(config[type].url)
             .success(function(data) {
               // Parse the data.
-              pageData = config[type].parser(data[0]);
+              pageData = config[type].parser(data);
 
               // Compare to cached, and set if needed.
               cachedPageData = localStorageService.get(type);
-              if (cachedPageData !== pageData) {
+
+              if (JSON.stringify(cachedPageData) != JSON.stringify(pageData)) {
                 localStorageService.add(type, pageData);
                 $scope.$emit('dataLoaded', pageData);
               }
