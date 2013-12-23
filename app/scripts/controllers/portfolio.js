@@ -9,4 +9,19 @@ angular.module('designbykubocomApp')
 
     // Get data, and fire event when ready.
     getter.getData($scope, 'portfolio');
+
+    // Default values.
+    $scope.activeCaseStudy = 0;
+    $scope.activeImage = 0;
+
+    // Function to set the activeCaseStudy.
+    $scope.setActiveCaseStudy = function (i) {
+      $scope.activeImage = 0;
+      $scope.activeCaseStudy = i;
+    }
+
+    // Function to set the activeImage.
+    $scope.setActiveImage = function (i) {
+      $scope.activeImage = i;
+    }
   }]);

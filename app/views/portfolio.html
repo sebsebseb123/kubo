@@ -6,15 +6,23 @@
       </div>
       <div class="row centered">
         <div class="col-md-3 study-tabs">
-          <div class="study-tab-{{$index}}" ng-repeat="study in page.caseStudies">
-            <div class="col-md-12">{{study.title}}</div>
+          <div ng-repeat="study in page.caseStudies" ng-click="setActiveCaseStudy($index)">
+            <div class="col-md-12">
+              <div class="title">{{study.title}}</div>
+              <div class="thumb" ng-bind-html="study.images[0]"></div>
+            </div>
           </div>
         </div>
         <div class="col-md-9 study">
-          <div class="study study-{{$index}}" ng-repeat="study in page.caseStudies">
+          <div class="study" ng-repeat="study in page.caseStudies" ng-show="activeCaseStudy == $index">
             <h3 class="col-md-12">{{study.title}}</h3>
             <div class="col-md-12" ng-bind-html="study.body"></div>
-            <div class="col-md-12 image-{{$index}}" ng-repeat="image in study.images" ng-bind-html="image"></div>
+            <div class="col-md-12 active-images row">
+              <div class="col-md-12" ng-repeat="image in study.images" ng-bind-html="image" ng-show="activeImage == $index"></div>
+            </div>
+            <div class="col-md-12 thumbnails row">
+              <div class="col-md-2" ng-repeat="image in study.images" ng-bind-html="image" ng-click="setActiveImage($index)"></div>
+            </div>
           </div>
         </div>
       </div>
