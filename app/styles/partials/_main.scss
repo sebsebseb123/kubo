@@ -1,0 +1,50 @@
+header,
+footer {
+    background-image: url(images/wall.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .nav > li {
+        a {
+            background-color: rgba(0,0,0,0);
+        }
+    }
+}
+
+#main {
+    width: 100%;
+}
+
+.logo{
+    .house {
+        margin-right: 10px;
+        height: 83px;
+    }
+    .text-logo {
+        height: 80px;
+    }
+}
+
+/* Rows for Pages */
+.row {
+    &.wide {
+        background-color: #EFEFF0;
+        box-shadow: 0 0 20px -10px;
+    }
+}
+
+/* Page Backgrounds */
+.background {
+    background-color: #FFF;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .number {
+        border: 1px solid rgba(0,0,0,0.5);
+    }
+    .icon {
+        background-image: url(images/icons.svg);
+        background-size: 2000px;
+        background-position: 7px -19px; /* Seat */
+    }
+}

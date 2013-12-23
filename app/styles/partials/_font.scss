@@ -1,0 +1,58 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header {
+    text-align: center;
+    .nav > li {
+        a {
+            color: #111;
+            font-size: larger;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 1px #FFF;
+        }
+    }
+}
+
+/* Custom page footer */
+footer {
+    .disclaimer {
+        font-size: 10px;
+        text-align: center;
+    }
+    .contact {
+        .info {
+            .title {
+                font-style: italic;
+            }
+            .data {
+                text-align: left;
+            }
+        }
+    }
+    .csp-logo {
+        text-align: center;
+    }
+}
+
+/* Page Backgrounds */
+.background {
+    .number {
+        font-size: 100px;
+        text-align: center;
+        font-family: 'Cardo', serif;
+    }
+}

@@ -1,0 +1,33 @@
+/* Page Backgrounds */
+.steps .background {
+    .icon {
+        &.icon-0 {
+            background-position: -203px -219px; /* Chat */
+        }
+        &.icon-1 {
+            background-position: 7px -19px; /* Seat */
+        }
+        &.icon-2 {
+            background-position: 7px -219px; /* Paintbrush */
+        }
+        &.icon-3 {
+            background-position: -203px -19px; /* Arrow */
+        }
+    }
+    &.paragraph {
+        background-image: url(images/living-room.jpg);
+    }
+    &.step-0 {
+        background-image: url(images/vase.jpg);
+    }
+    &.step-1 {
+        background-image: url(images/bedroom.jpg);
+    }
+    &.step-2 {
+        background-image: url(images/house.jpg);
+    }
+    &.step-3 {
+        background-image: url(images/kitchen.jpg);
+    }
+}
+

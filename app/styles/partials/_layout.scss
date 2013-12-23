@@ -1,0 +1,85 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+header,
+footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+header {
+    margin-bottom: 0;
+    padding-top: 20px;
+    .nav {
+        padding: 20px 0;
+    }
+    .nav > li {
+        display: inline-block;
+        float: none;
+    }
+}
+
+/* Custom page footer */
+footer {
+    padding-top: 20px;
+    &.row .row.centered {
+        padding: 10px 0;
+    }
+    .contact {
+        padding-top: 5px;
+        .info {
+            .title {
+                padding: 2px 5px;
+            }
+            .data {
+                padding: 2px 5px;
+            }
+        }
+    }
+    .csp-logo {
+        height: 120px;
+        line-height: 120px;
+        img {
+            height: 80px;
+            width: 80px;
+        }
+    }
+}
+
+/* Rows for Pages */
+.row {
+    &:first-child {
+        margin-top: 0;
+    }
+    .row.centered {
+        margin: auto;
+        padding: 40px 0;
+        width: 900px;
+    }
+}
+
+/* Page Backgrounds */
+.background {
+    padding: 0 0 300px;
+    .number {
+        border: 1px solid rgba(0,0,0,0.5);
+        height: 150px;
+        line-height: 150px;
+        width: 150px;
+    }
+    .paragraph {
+        padding: 0 40px;
+    }
+    .icon {
+        height: 150px;
+        width: 150px;
+    }
+}

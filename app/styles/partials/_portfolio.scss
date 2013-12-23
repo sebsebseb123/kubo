@@ -1,0 +1,88 @@
+.study-tabs,
+.study {
+    img {
+        background-color: #FFF;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        height: auto;
+        width: auto;
+    }
+}
+
+.tab {
+    cursor: pointer;
+    margin-bottom: 30px;
+    .title {
+        font-size: larger;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-shadow: 0 0 1px #FFF;
+    }
+}
+
+.thumb {
+    text-align: center;
+    img {
+        padding: 4px;
+    }
+}
+
+.study {
+    .active-images {
+        margin-bottom: 20px;
+        img {
+            padding: 7px;
+        }
+    }
+    .thumbs {
+        .thumb {
+            img {
+                cursor: pointer;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.study-tabs {
+    .tab {
+        height: 100px;
+        position: relative;
+        .thumb {
+            position: absolute;
+            transition: all .25s;
+            img {
+                max-width: 45%;
+            }
+            &.thumb-0 {
+                z-index: 3;
+            }
+            &.thumb-1 {
+                z-index: 2;
+            }
+            &.thumb-2 {
+                z-index: 1;
+            }
+            &.thumb-3,
+            &.thumb-4,
+            &.thumb-5,
+            &.thumb-6,
+            &.thumb-7 {
+                display: none;
+            }
+        }
+    }
+    .tab:hover {
+        .thumb {
+            &.thumb-1 {
+                transform: rotate(-10deg);
+                -ms-transform: rotate(-10deg);
+                -webkit-transform: rotate(-10deg);
+            }
+            &.thumb-2 {
+                transform: rotate(-20deg);
+                -ms-transform: rotate(-20deg);
+                -webkit-transform: rotate(-20deg);
+            }
+        }
+    }
+}
