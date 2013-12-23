@@ -17,6 +17,16 @@ angular.module('getter.directives', [])
 
         // Set config object, with urls and parsers.
         var config = {
+          'about': {
+            'url': 'http://dev-design-by-kubo.gotpantheon.com/about?callback=JSON_CALLBACK',
+            'parser': function(data) {
+              // Reset pageData object, then set it up.
+              pageData = {};
+              pageData.about_bodies = data.field_about_body.split('&lt;&lt;&gt;&gt;');
+              // Then return it.
+              return pageData;
+            }
+          },
           'steps': {
             'url': 'http://dev-design-by-kubo.gotpantheon.com/steps?callback=JSON_CALLBACK',
             'parser': function(data) {

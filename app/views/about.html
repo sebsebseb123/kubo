@@ -1,1 +1,9 @@
-<p>This is the about view.</p>
+<div class="about">
+  <div class="background about-{{$index}}" ng-repeat="about in page.about_bodies">
+    <div class="row wide">
+      <div class="row centered">
+        <div ng-bind-html="about" class="col-md-12 paragraph"></div>
+      </div>
+    </div>
+  </div>
+</div>
