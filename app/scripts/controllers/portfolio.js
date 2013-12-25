@@ -11,17 +11,29 @@ angular.module('designbykubocomApp')
     getter.getData($scope, 'portfolio');
 
     // Default values.
-    $scope.activeCaseStudy = 0;
-    $scope.activeImage = 0;
+    $scope.activeCase = -1;
+    $scope.activeCaseImage = [];
 
     // Function to set the activeCaseStudy.
-    $scope.setActiveCaseStudy = function (i) {
-      $scope.activeImage = 0;
-      $scope.activeCaseStudy = i;
+    $scope.setActiveCase = function (caseIndex) {
+      // Set the activeCase index.
+      $scope.activeCase = caseIndex;
+
+      // Select first image, if none selected.
+      if ($scope.activeCaseImage[caseIndex] == undefined) {
+        $scope.activeCaseImage[caseIndex] = 0;
+      }
     }
 
     // Function to set the activeImage.
-    $scope.setActiveImage = function (i) {
-      $scope.activeImage = i;
+    $scope.setActiveImage = function (caseIndex, imageIndex) {
+      // Get the number of images for this case study.
+      var numImgs = $scope.page.caseStudies[caseIndex].images.length;
+
+      // Don't do anything if we've gone too far.
+      if (imageIndex < numImgs) {
+        // Otherwise, set the activeImage for this case.
+        $scope.activeCaseImage[caseIndex] = imageIndex;
+      }
     }
   }]);

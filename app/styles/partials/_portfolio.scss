@@ -1,88 +1,56 @@
-.study-tabs,
-.study {
+.case-study {
+    height: 65px;
+    overflow: hidden;
+    transition: all .5s;
     img {
-        background-color: #FFF;
-        box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         height: auto;
-        width: auto;
+        margin-top: -30%;
+        transition: all .5s;
+        width: 100%;
     }
-}
-
-.tab {
-    cursor: pointer;
-    margin-bottom: 30px;
-    .title {
-        font-size: larger;
-        font-weight: bold;
-        margin-bottom: 10px;
-        text-shadow: 0 0 1px #FFF;
-    }
-}
-
-.thumb {
-    text-align: center;
-    img {
-        padding: 4px;
-    }
-}
-
-.study {
-    .active-images {
-        margin-bottom: 20px;
+    &.active {
+        height: 500px;
+        margin-bottom: 30px;
         img {
-            padding: 7px;
-        }
-    }
-    .thumbs {
-        .thumb {
-            img {
-                cursor: pointer;
-                max-width: 100%;
-            }
+            margin-top: 0;
         }
     }
 }
 
-.study-tabs {
-    .tab {
-        height: 100px;
-        position: relative;
-        .thumb {
-            position: absolute;
-            transition: all .25s;
-            img {
-                max-width: 45%;
-            }
-            &.thumb-0 {
-                z-index: 3;
-            }
-            &.thumb-1 {
-                z-index: 2;
-            }
-            &.thumb-2 {
-                z-index: 1;
-            }
-            &.thumb-3,
-            &.thumb-4,
-            &.thumb-5,
-            &.thumb-6,
-            &.thumb-7 {
-                display: none;
-            }
+.active-images {
+    margin-bottom: 30px;
+    padding: 0;
+    .active-image {
+        display: none;
+        &.active {
+            display: block;
         }
     }
-    .tab:hover {
-        .thumb {
-            &.thumb-1 {
-                transform: rotate(-10deg);
-                -ms-transform: rotate(-10deg);
-                -webkit-transform: rotate(-10deg);
-            }
-            &.thumb-2 {
-                transform: rotate(-20deg);
-                -ms-transform: rotate(-20deg);
-                -webkit-transform: rotate(-20deg);
-            }
+}
+
+.thumbs {
+    .thumb {
+        padding-left: 0;
+        text-align: center;
+        img {
+            cursor: pointer;
+            max-width: 100%;
         }
     }
+}
+
+.sidebar {
+    padding: 0;
+    .title {
+        height: 65px;
+        padding: 0;
+        h3 {
+            font-size: 25px;
+            margin: 20px 0;
+        }
+    }
+}
+
+.image-viewport {
+    padding: 0;
 }
