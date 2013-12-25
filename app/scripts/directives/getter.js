@@ -79,7 +79,7 @@ angular.module('getter.directives', [])
               pageData = config[type].parser(data);
 
               // Compare to cached, and set if needed.
-              cachedPageData = localStorageService.get(type);
+              var cachedPageData = localStorageService.get(type);
 
               if (JSON.stringify(cachedPageData) != JSON.stringify(pageData)) {
                 localStorageService.add(type, pageData);
