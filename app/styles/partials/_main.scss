@@ -1,12 +1,16 @@
 header,
 footer {
     background-image: url(images/wall.jpg);
-    background-position: center;
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     .nav > li {
-        a {
+        & > a {
             background-color: rgba(0,0,0,0);
+            &:hover,
+            &:focus {
+                background-color: rgba(255, 255, 255, 0.25);
+            }
         }
     }
 }
@@ -34,9 +38,6 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    .number {
-        border: 1px solid rgba(0,0,0,0.5);
-    }
     .icon {
         background-image: url(images/icons.svg);
         background-size: 2000px;

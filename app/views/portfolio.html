@@ -1,6 +1,6 @@
 <div class="portfolio">
   <div class="row wide">
-    <div class="row centered" ng-show="page.body">
+    <div class="row centered body" ng-show="page.body">
       <div ng-bind-html="page.body" class="col-md-12"></div>
     </div>
     <div class="row centered">
@@ -10,12 +10,14 @@
             <h3>{{study.title}}</h3>
           </div>
           <div class="description">
-            <div class="col-md-12" ng-bind-html="study.body"></div>
+            <div class="body col-md-12" ng-bind-html="study.body"></div>
           </div>
         </div>
         <div class="col-md-8 image-viewport">
           <div class="col-md-12 active-images row">
             <div ng-repeat="image in study.images" ng-bind-html="image" ng-class="{active: (activeCaseImage[$parent.$index] == $index), 'col-md-12': true, 'active-image': true}" ng-click="setActiveImage($parent.$index, $index + 1)"></div>
+          </div>
+          <div class="col-md-12 image-title row">
           </div>
           <div class="col-md-12 thumbs row">
             <div class="col-md-2 thumb" ng-repeat="image in study.images" ng-bind-html="image" ng-click="setActiveImage($parent.$index, $index)"></div>
