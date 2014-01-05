@@ -1,0 +1,15 @@
+/* Page Backgrounds */
+.about .background {
+    &.about-0 {
+        background-image: url(images/vase.jpg);
+    }
+    &.about-1 {
+        background-image: url(images/couch.jpg);
+    }
+    &.about-2 {
+        background-image: url(images/house.jpg);
+    }
+    &.about-3 {
+        background-image: url(images/kitchen.jpg);
+    }
+}
