@@ -14,10 +14,14 @@
           </div>
         </div>
         <div class="col-md-8 image-viewport">
+          <button type="button" class="pull-right close" aria-hidden="true" ng-click="removeActiveCase($event)">&times;</button>
           <div class="col-md-12 active-images row">
             <div ng-repeat="image in study.images" ng-bind-html="image" ng-class="{active: (activeCaseImage[$parent.$index] == $index), 'col-md-12': true, 'active-image': true}" ng-click="setActiveImage($parent.$index, $index + 1)"></div>
           </div>
-          <div class="col-md-12 image-title row">
+          <div class="col-md-12 image-titles row">
+            <div ng-repeat="title in study.imageTitles track by $index" ng-class="{'active-title': (activeCaseImage[$parent.$index] == $index), 'image-title': true}">
+              {{title}}
+            </div>
           </div>
           <div class="col-md-12 thumbs row">
             <div class="col-md-2 thumb" ng-repeat="image in study.images" ng-bind-html="image" ng-click="setActiveImage($parent.$index, $index)"></div>

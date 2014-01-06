@@ -25,6 +25,19 @@ angular.module('designbykubocomApp')
       }
     }
 
+    // Function to set the remove the activeCaseStudy.
+    $scope.removeActiveCase = function ($event) {
+      // Set the activeCase index.
+      $scope.activeCase = -1;
+
+      // Prevent bubbling to showItem.
+      // On recent browsers, only $event.stopPropagation() is needed
+      if ($event.stopPropagation) $event.stopPropagation();
+      if ($event.preventDefault) $event.preventDefault();
+      $event.cancelBubble = true;
+      $event.returnValue = false;
+    }
+
     // Function to set the activeImage.
     $scope.setActiveImage = function (caseIndex, imageIndex) {
       // Get the number of images for this case study.
