@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('designbykubocomApp', [
+  'calculator.directives',
   'getter.directives',
   'LocalStorageModule',
   'ngSanitize',
