@@ -358,7 +358,21 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
+    },
+
+    'ftp-deploy': {
+      build: {
+        auth: {
+          host: 'ftp.designbykubo.com',
+          port: 21,
+          authKey: 'key1'
+        },
+        src: '<%= yeoman.dist %>',
+        dest: '.',
+        exclusions: ['.DS_Store', 'Thumbs.db', 'bower_components']
+      }
     }
+
   });
 
 
@@ -402,6 +416,11 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin'
+  ]);
+
+  grunt.registerTask('godaddy', [
+    'build',
+    'ftp-deploy'
   ]);
 
   grunt.registerTask('default', [
