@@ -18,7 +18,7 @@ angular.module('getter.directives', [])
         // Set config object, with urls and parsers.
         var config = {
           'about': {
-            'url': 'http://dev-design-by-kubo.gotpantheon.com/about?callback=JSON_CALLBACK',
+            'url': 'http://designbykubo.com/_drupal/about?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
@@ -28,7 +28,7 @@ angular.module('getter.directives', [])
             }
           },
           'portfolio': {
-            'url': 'http://dev-design-by-kubo.gotpantheon.com/portfolio?callback=JSON_CALLBACK',
+            'url': 'http://designbykubo.com/_drupal/portfolio?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
@@ -55,7 +55,7 @@ angular.module('getter.directives', [])
             }
           },
           'steps': {
-            'url': 'http://dev-design-by-kubo.gotpantheon.com/steps?callback=JSON_CALLBACK',
+            'url': 'http://designbykubo.com/_drupal/steps?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
@@ -66,7 +66,7 @@ angular.module('getter.directives', [])
             }
           },
           'contact': {
-            'url': 'http://dev-design-by-kubo.gotpantheon.com/contact?callback=JSON_CALLBACK',
+            'url': 'http://designbykubo.com/_drupal/contact?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
               pageData = {};
