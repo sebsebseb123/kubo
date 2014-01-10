@@ -1,6 +1,8 @@
 /* Page Backgrounds */
 .steps .background {
+    background-image: url(images/dining.jpg);
     .icon {
+        background-position: -203px -19px; /* Arrow */
         &.icon-0 {
             background-position: -203px -219px; /* Chat */
         }

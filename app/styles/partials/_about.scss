@@ -1,15 +1,12 @@
 /* Page Backgrounds */
 .about .background {
+    background-image: url(images/bedroom.jpg);
+    padding: 400px 0 0;
     &.about-0 {
-        background-image: url(images/vase.jpg);
+        background-image: url(images/dining.jpg);
+        background-position: 0 -350px;
     }
     &.about-1 {
-        background-image: url(images/couch.jpg);
-    }
-    &.about-2 {
-        background-image: url(images/house.jpg);
-    }
-    &.about-3 {
-        background-image: url(images/kitchen.jpg);
+        background-image: url(images/living-room.jpg);
     }
 }

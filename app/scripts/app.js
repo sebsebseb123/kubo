@@ -1,13 +1,15 @@
 'use strict';
 
 angular.module('designbykubocomApp', [
-  'calculator.directives',
   'getter.directives',
   'LocalStorageModule',
   'ngSanitize',
   'ngRoute'
 ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+
+    $locationProvider.html5Mode(true);
+
     $routeProvider
       .when('/steps', {
         templateUrl: 'views/steps.html',
