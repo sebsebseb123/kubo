@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="designbykubocomApp">
+  <body ng-app="designbykubocomApp" ng-controller="MainCtrl" class="{{path}}">
     <!-- Main container -->
     <div id="main">
 
@@ -38,11 +38,11 @@
           <img class="house" alt="Design by Kubo" src="/images/house-logo.png" />
           <img class="text-logo" alt="Design by Kubo" src="/images/text-logo.png" />
         </div>
-        <ul class="nav nav-pills">
-          <li><a ng-href="/steps">Process</a></li>
-          <li><a ng-href="/about">Services</a></li>
-          <li><a ng-href="/portfolio">Gallery</a></li>
-          <li><a ng-href="/contact">Contact</a></li>
+        <ul class="nav">
+          <li><a class="steps" ng-href="/steps">Process</a></li>
+          <li><a class="about" ng-href="/about">Services</a></li>
+          <li><a class="portfolio" ng-href="/portfolio">Gallery</a></li>
+          <li><a class="contact" ng-href="/contact">Contact</a></li>
         </ul>
       </header>
 

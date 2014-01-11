@@ -18,6 +18,7 @@ angular.module('designbykubocomApp')
     $scope.setActiveCase = function (caseIndex) {
       // Set the activeCase index.
       $scope.activeCase = caseIndex;
+      $scope.activeCaseImage = [];
 
       // Select first image, if none selected.
       if ($scope.activeCaseImage[caseIndex] == undefined) {
@@ -29,6 +30,7 @@ angular.module('designbykubocomApp')
     $scope.removeActiveCase = function ($event) {
       // Set the activeCase index.
       $scope.activeCase = -1;
+      $scope.activeCaseImage = [];
 
       // Prevent bubbling to showItem.
       // On recent browsers, only $event.stopPropagation() is needed

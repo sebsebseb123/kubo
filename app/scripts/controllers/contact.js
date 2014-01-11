@@ -10,13 +10,15 @@ angular.module('designbykubocomApp')
     // Get data, and fire event when ready.
     getter.getData($scope, 'contact');
 
-    // Set "contactSent" flag to false by default.
+    // Set flag defaults.
+    $scope.contactSending = false;
     $scope.contactSent = false;
 
     // Add a newsletter signup.
     $scope.addNewContact = function () {
       // Get the form data from the scope.
       var user = $scope.user;
+      $scope.contactSending = true;
 
       // Prepare the data.
       var nodeData = {
@@ -33,6 +35,7 @@ angular.module('designbykubocomApp')
           $scope.user = {};
           // Set our "signupSent" flag.
           $scope.contactSent = true;
+          $scope.contactSending = false;
         });
     }
   }]);
