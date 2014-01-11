@@ -28,6 +28,6 @@ angular.module('designbykubocomApp', [
         controller: 'ContactCtrl'
       })
       .otherwise({
-        redirectTo: '/steps'
+        redirectTo: '/about'
       });
   });

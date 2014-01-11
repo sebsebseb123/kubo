@@ -17,18 +17,22 @@
         }
     }
     &.paragraph {
-        background-image: url(images/living-room.jpg);
+        background-image: url(images/bathroom.jpg);
     }
     &.step-0 {
         background-image: url(images/dining.jpg);
+        background-position: 0 -130px;
     }
     &.step-1 {
-        background-image: url(images/bathroom.jpg);
+        background-image: url(images/living-room.jpg);
+        background-position: 0 -30px;
     }
     &.step-2 {
         background-image: url(images/mood-board.jpg);
+        background-position: 0 20px;
     }
     &.step-3 {
         background-image: url(images/bedroom.jpg);
+        background-position: 0 -90px;
     }
 }

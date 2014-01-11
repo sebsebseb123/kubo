@@ -16,9 +16,13 @@ angular.module('designbykubocomApp')
 
     // Function to set the activeCaseStudy.
     $scope.setActiveCase = function (caseIndex) {
+      // If we're switching cases, reset the active image on the old one.
+      if (caseIndex != $scope.activeCase) {
+        $scope.activeCaseImage[$scope.activeCase] = -1;
+      }
+
       // Set the activeCase index.
       $scope.activeCase = caseIndex;
-      $scope.activeCaseImage = [];
 
       // Select first image, if none selected.
       if ($scope.activeCaseImage[caseIndex] == undefined) {
