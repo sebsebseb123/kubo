@@ -9,9 +9,9 @@
   <div class="step background step-{{$index}}" ng-repeat="step in page.steps">
     <div class="row wide">
       <div class="row centered">
-        <div class="col-md-2 number">{{$index + 1}}</div>
-        <div ng-bind-html="step" class="col-md-8 paragraph"></div>
-        <div class="col-md-2 icon icon-{{$index}}"></div>
+        <div class="col-md-2 col-xs-2 number">{{$index + 1}}</div>
+        <div ng-bind-html="step" class="col-md-8 col-xs-10 paragraph"></div>
+        <div class="col-md-2 hidden-xs icon icon-{{$index}}"></div>
       </div>
     </div>
   </div>

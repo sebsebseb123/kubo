@@ -80,8 +80,9 @@ footer {
     }
     .row.centered {
         margin: auto;
+        max-width: 900px;
         padding: 40px 0 20px;
-        width: 900px;
+        width: 100%;
     }
 }
 
@@ -91,10 +92,10 @@ footer {
     .number {
         border: 1px solid #000;
         color: #000;
-        height: 120px;
+        max-height: 120px;
         line-height: 120px;
         margin-top: 5px;
-        width: 120px;
+        max-width: 120px;
     }
     .paragraph {
         padding: 0 40px;
