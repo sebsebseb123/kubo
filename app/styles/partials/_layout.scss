@@ -14,6 +14,10 @@ h6 {
     margin-top: 0;
 }
 
+blockquote {
+    padding: 0 20px;
+}
+
 header,
 footer {
     padding-left: 15px;
@@ -81,7 +85,7 @@ footer {
     .row.centered {
         margin: auto;
         max-width: 900px;
-        padding: 40px 0 20px;
+        padding: 40px 0;
         width: 100%;
     }
 }
