@@ -16,6 +16,15 @@ h6 {
     text-transform: uppercase;
 }
 
+blockquote {
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    p {
+        font-size: 20px;
+    }
+}
+
 header {
     text-align: center;
     .nav > li {

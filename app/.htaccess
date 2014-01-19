@@ -1,9 +1,9 @@
 # Apache Configuration File
 
-AuthType Basic
-AuthName "DesignByKubo.com"
-AuthUserFile "/home/kuboadmin/.htpasswds/public_html/passwd"
-require valid-user
+# AuthType Basic
+# AuthName "DesignByKubo.com"
+# AuthUserFile "/home/kuboadmin/.htpasswds/public_html/passwd"
+# require valid-user
 
 # (!) Using `.htaccess` files slows down Apache, therefore, if you have access
 # to the main server config file (usually called `httpd.conf`), you should add
