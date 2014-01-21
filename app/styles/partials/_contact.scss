@@ -3,6 +3,9 @@
  */
 .contact .paragraph {
     padding: 0 30px;
+    .paragraph {
+        padding: 0;
+    }
 }
 
 .contact form {

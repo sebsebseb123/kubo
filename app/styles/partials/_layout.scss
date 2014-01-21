@@ -45,7 +45,7 @@ footer {
     position: absolute !important;
     width: 100%;
     &.row .row.centered {
-        padding: 10px 0;
+        padding: 10px 0 0;
     }
     .contact {
         padding-top: 5px;
@@ -58,12 +58,14 @@ footer {
             }
         }
     }
-    .csp-logo {
-        height: 120px;
-        line-height: 120px;
+    .logo {
+        height: 150px;
+        line-height: 150px;
+        margin-left: 30px;
+        margin-right: 20px;
         img {
-            height: 80px;
-            width: 80px;
+            height: 140px;
+            width: 140px;
         }
     }
 }
@@ -108,4 +110,9 @@ footer {
         height: 150px;
         width: 150px;
     }
+}
+
+/* CSP icon margin */
+.csp-logo {
+    margin-right: 20px;
 }

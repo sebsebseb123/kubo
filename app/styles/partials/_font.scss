@@ -67,3 +67,24 @@ footer {
         font-family: 'Cardo', serif;
     }
 }
+
+/* Icons */
+.btn-linkedin {
+    padding-left: 0;
+}
+
+i.fa {
+    color: #FFF;
+    display: block;
+    height: 28px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    width: 28px;
+    &.fa-facebook {
+        background: #3B5998;
+    }
+    &.fa-linkedin {
+        background: #007BB6;
+    }
+}

@@ -22,26 +22,23 @@
     }
     &.step-0 {
         background-image: url(images/family-room-after.jpg);
-        /*background-position: 0 -195px;*/
     }
     &.step-1 {
         background-image: url(images/living-room.jpg);
-        /*background-position: 0 -30px;*/
     }
     &.step-2 {
         background-image: url(images/mood-board.jpg);
-        /*background-position: 0 20px;*/
     }
     &.step-3 {
         background-image: url(images/bedroom.jpg);
-        /*background-position: 0 -90px;*/
     }
     &.step {
       .number {
-        margin-left: 25px;
+        margin-left: 35px;
       }
       .paragraph {
-        margin-left: -30px;
+        margin-left: -20px;
+        margin-right: -30px;
       }
     }
 }
