@@ -35,16 +35,20 @@ angular.module('getter.directives', [])
               pageData.body = data[0].body;
               pageData.caseStudies = [];
               for (var i = 0; i < data.length; i++) {
+
                 // Create tmp var.
                 var caseStudy = {};
                 caseStudy.title = data[i].title;
                 caseStudy.body = data[i].body_1;
-                caseStudy.images = data[i].nothing.split('||||');
+                caseStudy.images = data[i].images.split('||||');
+                caseStudy.thumbs = data[i].thumbnails.split('||||');
 
                 // Get image titles.
                 caseStudy.imageTitles = [];
+                caseStudy.thumbTitles = [];
                 for (var j = 0; j < caseStudy.images.length; j++) {
                   caseStudy.imageTitles[j] = $(caseStudy.images[j]).attr('title');
+                  caseStudy.thumbTitles[j] = $(caseStudy.thumbs[j]).attr('title');
                 }
 
                 // Add tmp var to pageData.
