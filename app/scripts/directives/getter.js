@@ -13,11 +13,10 @@ angular.module('getter.directives', [])
         // Set global vars.
         var pageData;
 
-        //debugger;
-
         // Set config object, with urls and parsers.
         var config = {
           'about': {
+            'event': 'dataLoaded',
             'url': 'http://designbykubo.com/_drupal/about?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
@@ -27,7 +26,22 @@ angular.module('getter.directives', [])
               return pageData;
             }
           },
+          'testimonials': {
+            'event': 'testimonialsLoaded',
+            'url': 'http://designbykubo.com/_drupal/testimonials?callback=JSON_CALLBACK',
+            'parser': function(data) {
+              // Reset pageData object, then set it up.
+              pageData = {};
+
+              // Add out testimonial data.
+              pageData = data;
+
+              // Then return it.
+              return pageData;
+            }
+          },
           'portfolio': {
+            'event': 'dataLoaded',
             'url': 'http://designbykubo.com/_drupal/portfolio?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
@@ -59,6 +73,7 @@ angular.module('getter.directives', [])
             }
           },
           'steps': {
+            'event': 'dataLoaded',
             'url': 'http://designbykubo.com/_drupal/steps?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
@@ -70,6 +85,7 @@ angular.module('getter.directives', [])
             }
           },
           'contact': {
+            'event': 'dataLoaded',
             'url': 'http://designbykubo.com/_drupal/contact?callback=JSON_CALLBACK',
             'parser': function(data) {
               // Reset pageData object, then set it up.
@@ -93,7 +109,7 @@ angular.module('getter.directives', [])
 
               if (JSON.stringify(cachedPageData) != JSON.stringify(pageData)) {
                 localStorageService.add(type, pageData);
-                $scope.$emit('dataLoaded', pageData);
+                $scope.$emit(config[type].event, pageData);
               }
             });
         };
@@ -106,7 +122,7 @@ angular.module('getter.directives', [])
         else {
           // Get data from cookie.
           pageData = localStorageService.get(type);
-          $scope.$emit('dataLoaded', pageData);
+          $scope.$emit(config[type].event, pageData);
           getJson();
         }
       }

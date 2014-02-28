@@ -2,7 +2,16 @@
 
 angular.module('designbykubocomApp')
   .controller('PortfolioCtrl', ['$scope', 'getter', function ($scope, getter) {
-    // Add an event listener.
+    // Add an event listener for testimonials.
+    $scope.$on('testimonialsLoaded', function(event, pageData) {
+      console.log(pageData);
+      $scope.testimonials = pageData;
+    });
+
+    // Get data, and fire event when ready.
+    getter.getData($scope, 'testimonials');
+
+    // Add an event listener for gallery.
     $scope.$on('dataLoaded', function(event, pageData) {
       $scope.page = pageData;
     });

@@ -1,9 +1,39 @@
 <div class="portfolio">
   <div class="row wide">
+
+    <!-- Page Body -->
     <div class="row centered body" ng-show="page.body">
       <div ng-bind-html="page.body" class="col-md-12 col-xs-12"></div>
     </div>
     <div class="row centered">
+
+      <!-- Testimonials -->
+      <div class="testimonials-wrapper well">
+        <div id="carousel-details" class="row section details-wrapper carousel slide" data-interval="false" data-ride="carousel">
+
+          <!-- Wrapper for slides -->
+          <div class="col-sm-12 carousel-inner">
+
+            <!-- Testimonial -->
+            <div class="item testimonial" ng-repeat="testimonial in testimonials" ng-class="{active: ($index == 0)}">
+              <blockquote class="col-xs-8 col-xs-offset-2" ng-bind-html="testimonial.body"></blockquote>
+              <div class="col-xs-4 col-xs-offset-8 author">- <strong ng-bind-html="testimonial.title"></strong></div>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-details" data-slide="prev" onClick="return false;">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-details" data-slide="next" onClick="return false;">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Gallery -->
       <div ng-repeat="study in page.caseStudies" ng-class="{active: (activeCase == $index), 'col-md-12': true, 'case-study': true}" ng-click="setActiveCase($index)">
         <div class="col-md-4 col-xs-4 sidebar">
           <div class="col-md-12 title">
