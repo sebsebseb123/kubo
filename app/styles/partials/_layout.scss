@@ -1,7 +1,7 @@
 html,
 body {
-    background: #EFEFF0;
-    height: 100%;
+  background: #EFEFF0;
+  height: 100%;
 }
 
 h1,
@@ -10,109 +10,113 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: 10px;
-    margin-top: 0;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 blockquote {
-    padding: 0 30px;
+  padding: 0 30px;
+}
+.well blockquote {
+  border-left: 0;
+  margin-bottom: 0;
 }
 
 header,
 footer {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Custom page header */
 header {
-    margin-bottom: 0;
-    padding-top: 30px;
-    .nav {
-        padding: 20px 0;
-    }
-    .nav > li {
-        display: inline-block;
-        float: none;
-    }
+  margin-bottom: 0;
+  padding-top: 30px;
+  .nav {
+    padding: 20px 0;
+  }
+  .nav > li {
+    display: inline-block;
+    float: none;
+  }
 }
 
 /* Custom page footer */
 footer {
-    height: 195px;
-    margin: 0 auto !important;
-    padding: 0;
-    position: absolute !important;
-    width: 100%;
-    &.row .row.centered {
-        padding: 10px 0 0;
+  height: 195px;
+  margin: 0 auto !important;
+  padding: 0;
+  position: absolute !important;
+  width: 100%;
+  &.row .row.centered {
+    padding: 10px 0 0;
+  }
+  .contact {
+    padding-top: 5px;
+    .info {
+      .title {
+        padding: 2px 5px;
+      }
+      .data {
+        padding: 2px 5px;
+      }
     }
-    .contact {
-        padding-top: 5px;
-        .info {
-            .title {
-                padding: 2px 5px;
-            }
-            .data {
-                padding: 2px 5px;
-            }
-        }
+  }
+  .logo {
+    height: 150px;
+    line-height: 150px;
+    margin-left: 30px;
+    margin-right: 20px;
+    img {
+      height: 140px;
+      width: 140px;
     }
-    .logo {
-        height: 150px;
-        line-height: 150px;
-        margin-left: 30px;
-        margin-right: 20px;
-        img {
-            height: 140px;
-            width: 140px;
-        }
-    }
+  }
 }
 
 #main {
-    min-height: 100%;
+  min-height: 100%;
 }
 
 #content {
-    margin-bottom: -175px;
-    padding-bottom: 175px;
+  margin-bottom: -175px;
+  padding-bottom: 175px;
 }
 
 /* Rows for Pages */
 .row {
-    &:first-child {
-        margin-top: 0;
-    }
-    .row.centered {
-        margin: auto;
-        max-width: 900px;
-        padding: 40px 0;
-        width: 100%;
-    }
+  &:first-child {
+    margin-top: 0;
+  }
+  .row.centered {
+    margin: auto;
+    max-width: 900px;
+    padding: 40px 0;
+    width: 100%;
+  }
 }
 
 /* Page Backgrounds */
 .background {
-    padding: 0 0 400px;
-    .number {
-        border: 1px solid #000;
-        color: #000;
-        max-height: 120px;
-        line-height: 120px;
-        margin-top: 5px;
-        max-width: 120px;
-    }
-    .paragraph {
-        padding: 0 40px;
-    }
-    .icon {
-        height: 150px;
-        width: 150px;
-    }
+  padding: 0 0 400px;
+  .number {
+    border: 1px solid #000;
+    color: #000;
+    max-height: 120px;
+    line-height: 120px;
+    margin-top: 5px;
+    max-width: 120px;
+  }
+  .paragraph {
+    padding: 0 40px;
+  }
+  .icon {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 /* CSP icon margin */
 .csp-logo {
-    margin-right: 20px;
+  margin-right: 20px;
 }
