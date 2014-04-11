@@ -41,10 +41,25 @@
 .active-images {
   padding: 0;
   .active-image {
-    cursor: pointer;
     display: none;
     &.active {
       display: block;
+    }
+    .fa {
+      cursor: pointer;
+      color: #000;
+      font-size: 24px;
+      margin-top: -100px;
+      padding: 50px;
+      position: relative;
+      text-shadow: 0 0 2px #FFF,
+                  0 0 2px #FFF,
+                  0 0 2px #FFF,
+                  0 0 2px #FFF,
+                  0 0 2px #FFF;
+      &.fa-arrow-left {
+        padding-left: 30px;
+      }
     }
   }
 }
